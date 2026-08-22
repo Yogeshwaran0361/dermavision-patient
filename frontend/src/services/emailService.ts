@@ -119,12 +119,12 @@ export async function sendDermaVisionEmail({
       throw new Error('EmailJS send function is unavailable');
     }
 
-    const response = await sendFn(
-      SERVICE_ID,
-      TEMPLATE_ID,
-      templateParams,
-      { publicKey: PUBLIC_KEY }
-    );
+    let response;
+    try {
+      response = await sendFn(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+    } catch (e1) {
+      response = await sendFn(SERVICE_ID, TEMPLATE_ID, templateParams, { publicKey: PUBLIC_KEY });
+    }
 
     console.log(`[EMAILJS SUCCESS] Delivered '${title}' to '${maskEmail(recipientEmail)}' | Status: ${response.status} ${response.text}`);
     return {
