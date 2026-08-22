@@ -53,7 +53,7 @@ export function initEmailJS(): void {
 
 /**
  * Core Dual-Engine EmailJS Dispatch Service (SDK + Direct HTTP Fetch Fallback).
- * Guarantees 100% reliable email delivery across all browser and serverless environments.
+ * Includes safe debug logging for tracing user actions -> send execution -> API response.
  */
 export async function sendDermaVisionEmail({
   toEmail,
@@ -68,11 +68,17 @@ export async function sendDermaVisionEmail({
   riskLevel,
   scanDate
 }: SendDermaVisionEmailParams): Promise<SendDermaVisionEmailResult> {
+  console.log('[EMAILJS DEBUG] EMAIL TRIGGER STARTED');
+  console.log('[EMAILJS DEBUG] EMAILJS FUNCTION CALLED');
+  console.log(`[EMAILJS DEBUG] SERVICE CONFIGURED: ${Boolean(SERVICE_ID)}`);
+  console.log(`[EMAILJS DEBUG] TEMPLATE CONFIGURED: ${Boolean(TEMPLATE_ID)}`);
+  console.log(`[EMAILJS DEBUG] PUBLIC KEY CONFIGURED: ${Boolean(PUBLIC_KEY)}`);
+
   const hasUserEmail = Boolean(toEmail && typeof toEmail === 'string' && toEmail.includes('@') && toEmail.trim().length >= 5);
   const recipientEmail = hasUserEmail ? toEmail.trim() : '';
 
   if (!hasUserEmail) {
-    console.warn('[EMAILJS SKIPPED] Recipient email unavailable or invalid:', toEmail);
+    console.warn('[EMAILJS DEBUG] EMAILJS SKIPPED: Recipient email unavailable or invalid:', toEmail);
     return {
       success: false,
       recipientEmail: toEmail || '',
@@ -108,7 +114,7 @@ export async function sendDermaVisionEmail({
     scan_date: scanDate || new Date().toLocaleDateString()
   };
 
-  console.log(`[EMAILJS DISPATCH] Service '${SERVICE_ID}' | Template '${TEMPLATE_ID}' | Recipient '${maskEmail(recipientEmail)}' | Event: '${title}'`);
+  console.log('[EMAILJS DEBUG] EMAILJS SEND STARTED');
 
   // Engine 1: Official @emailjs/browser SDK
   try {
@@ -121,7 +127,8 @@ export async function sendDermaVisionEmail({
       } catch (e1) {
         res = await sendFn(SERVICE_ID, TEMPLATE_ID, templateParams, { publicKey: PUBLIC_KEY });
       }
-      console.log(`[EMAILJS SUCCESS via SDK] Delivered '${title}' to '${maskEmail(recipientEmail)}' | Status: ${res.status}`);
+      console.log(`[EMAILJS DEBUG] EMAILJS RESPONSE STATUS: ${res.status}`);
+      console.log(`[EMAILJS DEBUG] EMAILJS RESPONSE TEXT: ${res.text || 'OK'}`);
       return {
         success: res.status === 200,
         recipientEmail,
@@ -129,7 +136,7 @@ export async function sendDermaVisionEmail({
       };
     }
   } catch (sdkError: any) {
-    console.warn('[EMAILJS SDK NOTICE] SDK attempt failed, switching to direct HTTP Engine:', sdkError?.text || sdkError?.message || sdkError);
+    console.warn('[EMAILJS DEBUG] SDK engine notice, attempting Direct HTTP Engine:', sdkError?.text || sdkError?.message || sdkError);
   }
 
   // Engine 2: Direct HTTP Fetch API Fallback
@@ -148,15 +155,17 @@ export async function sendDermaVisionEmail({
     });
 
     const respText = await httpRes.text();
+    console.log(`[EMAILJS DEBUG] EMAILJS RESPONSE STATUS: ${httpRes.status}`);
+    console.log(`[EMAILJS DEBUG] EMAILJS RESPONSE TEXT: ${respText}`);
+
     if (httpRes.ok) {
-      console.log(`[EMAILJS SUCCESS via Direct HTTP] Delivered '${title}' to '${maskEmail(recipientEmail)}' | Status: 200 ${respText}`);
       return {
         success: true,
         recipientEmail,
         status: respText || 'OK'
       };
     } else {
-      console.error(`[EMAILJS DIRECT HTTP ERROR] Delivery failed with HTTP ${httpRes.status}: ${respText}`);
+      console.error(`[EMAILJS DEBUG] EMAILJS ERROR:\nHTTP ${httpRes.status}: ${respText}`);
       return {
         success: false,
         recipientEmail,
@@ -165,7 +174,7 @@ export async function sendDermaVisionEmail({
     }
   } catch (httpErr: any) {
     const errorMsg = httpErr?.message || String(httpErr);
-    console.error(`[EMAILJS DISPATCH ERROR] Delivery to '${maskEmail(recipientEmail)}' failed:`, errorMsg);
+    console.error(`[EMAILJS DEBUG] EMAILJS ERROR:\n${errorMsg}`);
     return {
       success: false,
       recipientEmail,
