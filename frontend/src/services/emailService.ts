@@ -21,10 +21,10 @@ export interface SendDermaVisionEmailResult {
   error?: string;
 }
 
-// Read EmailJS credentials from Vite environment variables (11:25 PM State: service_20rx1d8, template_mx4zoze, xhkqRY1oAMS-7kYwe)
+// Read EmailJS credentials from Vite environment variables (Updated: service_4n9sk5l, template_rs5wfdu)
 const metaEnv = (import.meta as any).env || {};
-const SERVICE_ID = metaEnv.VITE_EMAILJS_SERVICE_ID || 'service_20rx1d8';
-const TEMPLATE_ID = metaEnv.VITE_EMAILJS_TEMPLATE_ID || 'template_mx4zoze';
+const SERVICE_ID = metaEnv.VITE_EMAILJS_SERVICE_ID || 'service_4n9sk5l';
+const TEMPLATE_ID = metaEnv.VITE_EMAILJS_TEMPLATE_ID || 'template_rs5wfdu';
 const PUBLIC_KEY = metaEnv.VITE_EMAILJS_PUBLIC_KEY || 'xhkqRY1oAMS-7kYwe';
 
 let isInitialized = false;
