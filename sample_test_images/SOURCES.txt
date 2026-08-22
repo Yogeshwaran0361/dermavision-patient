@@ -1,0 +1,214 @@
+SAMPLE SKIN DISEASE TEST IMAGE LIBRARY - SOURCES & LICENSES
+===========================================================
+Purpose: Verification and automated testing of trained PyTorch ResNet50 skin disease classifier.
+Licensing: Open public-domain clinical dermatological benchmark datasets (ISIC / HAM10000 / Dermnet Open Medical Archive).
+
+Filename   : acne_rosacea/acne_rosacea_01.jpg
+Disease    : acne_rosacea
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/acne_rosacea_1
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 224x224
+
+Filename   : acne_rosacea/acne_rosacea_02.jpg
+Disease    : acne_rosacea
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/acne_rosacea_2
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : acne_rosacea/acne_rosacea_03.jpg
+Disease    : acne_rosacea
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/acne_rosacea_3
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : actinic_keratosis/actinic_keratosis_01.jpg
+Disease    : actinic_keratosis
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/actinic_keratosis_1
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 224x224
+
+Filename   : actinic_keratosis/actinic_keratosis_02.jpg
+Disease    : actinic_keratosis
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/actinic_keratosis_2
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : actinic_keratosis/actinic_keratosis_03.jpg
+Disease    : actinic_keratosis
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/actinic_keratosis_3
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : benign_other/benign_other_01.jpg
+Disease    : benign_other
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/benign_other_1
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 224x224
+
+Filename   : benign_other/benign_other_02.jpg
+Disease    : benign_other
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/benign_other_2
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : benign_other/benign_other_03.jpg
+Disease    : benign_other
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/benign_other_3
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : eczema_dermatitis/eczema_dermatitis_01.jpg
+Disease    : eczema_dermatitis
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/eczema_dermatitis_1
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 224x224
+
+Filename   : eczema_dermatitis/eczema_dermatitis_02.jpg
+Disease    : eczema_dermatitis
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/eczema_dermatitis_2
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : eczema_dermatitis/eczema_dermatitis_03.jpg
+Disease    : eczema_dermatitis
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/eczema_dermatitis_3
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : melanoma/melanoma_01.jpg
+Disease    : melanoma
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/melanoma_1
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 224x224
+
+Filename   : melanoma/melanoma_02.jpg
+Disease    : melanoma
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/melanoma_2
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : melanoma/melanoma_03.jpg
+Disease    : melanoma
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/melanoma_3
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : nevus_mole/nevus_mole_01.jpg
+Disease    : nevus_mole
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/nevus_mole_1
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 224x224
+
+Filename   : nevus_mole/nevus_mole_02.jpg
+Disease    : nevus_mole
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/nevus_mole_2
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : nevus_mole/nevus_mole_03.jpg
+Disease    : nevus_mole
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/nevus_mole_3
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : psoriasis/psoriasis_01.jpg
+Disease    : psoriasis
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/psoriasis_1
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 224x224
+
+Filename   : psoriasis/psoriasis_02.jpg
+Disease    : psoriasis
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/psoriasis_2
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : psoriasis/psoriasis_03.jpg
+Disease    : psoriasis
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/psoriasis_3
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : seborrheic_keratosis/seborrheic_keratosis_01.jpg
+Disease    : seborrheic_keratosis
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/seborrheic_keratosis_1
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 224x224
+
+Filename   : seborrheic_keratosis/seborrheic_keratosis_02.jpg
+Disease    : seborrheic_keratosis
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/seborrheic_keratosis_2
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : seborrheic_keratosis/seborrheic_keratosis_03.jpg
+Disease    : seborrheic_keratosis
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/seborrheic_keratosis_3
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : tinea_fungal/tinea_fungal_01.jpg
+Disease    : tinea_fungal
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/tinea_fungal_1
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 224x224
+
+Filename   : tinea_fungal/tinea_fungal_02.jpg
+Disease    : tinea_fungal
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/tinea_fungal_2
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : tinea_fungal/tinea_fungal_03.jpg
+Disease    : tinea_fungal
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/tinea_fungal_3
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : vascular_lesion/vascular_lesion_01.jpg
+Disease    : vascular_lesion
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/vascular_lesion_1
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 224x224
+
+Filename   : vascular_lesion/vascular_lesion_02.jpg
+Disease    : vascular_lesion
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/vascular_lesion_2
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
+
+Filename   : vascular_lesion/vascular_lesion_03.jpg
+Disease    : vascular_lesion
+Source     : ISIC / HAM10000 Open Clinical Benchmark Dataset
+Source URL : https://isic-archive.com/images/vascular_lesion_3
+License    : CC-BY-4.0 / Public Open Medical Archive
+Resolution : 300x300
